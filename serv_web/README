@@ -1,6 +1,5 @@
 ## HOW TO USE
 
-
 docker build -t apache_serv .
 
 docker run  -p 80:80 --name apache_serv  apache_serv
