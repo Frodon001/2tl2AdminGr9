@@ -12,10 +12,10 @@ $TTL    604800
 @				IN	NS			ns.wt1.ephec-ti.be.
 
 ; name servers - A record
-ns 				IN	A				localhost:8080
+ns 				IN	A				51.178.41.108
 
 ; web services
-serverWeb			IN	A		localhost:8080
+serverWeb			IN	A		51.178.41.108
 www					IN	CNAME	serverWeb
 
 ; mail services
