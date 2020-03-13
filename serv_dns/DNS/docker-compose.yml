@@ -12,5 +12,5 @@ services :
       - ./bind/named.conf.options:/etc/bind/named.conf.options
       - ./bind/named.conf.default-zones:/etc/bind/named.conf.default-zones
       - ./bind/named.conf.local:/etc/bind/named.conf.local
-      - ./bind/db.wt2-10.ephec-ti.be:/etc/bind/db.wt2-10.ephec-ti.be
-      - ./bind/db.internal.wt2-10.ephec-ti.be:/etc/bind/db.wt2-10.ephec-ti.internal.be
+      - ./bind/db.wt1-9.ephec-ti.be:/etc/bind/db.wt1-9.ephec-ti.be
+      - ./bind/db.internal.wt1-9.ephec-ti.be:/etc/bind/db.wt1-9.ephec-ti.internal.be

@@ -10,13 +10,13 @@ view "internal" {
     allow-recursion { internals; };
     zone "wt2-10.ephec-ti.be" {
         type master;
-        file "/etc/bind/db.internal.wt2-10.ephec-ti.be";
+        file "/etc/bind/db.internal.wt1-9.ephec-ti.be";
     };
 };
 view "external" {
     match-clients { any; };
-    zone "wt2-10.ephec-ti.be" {
+    zone "wt1-9.ephec-ti.be" {
         type master;
-        file "/etc/bind/db.wt2-10.ephec-ti.be";
+        file "/etc/bind/db.wt1-9.ephec-ti.be";
     };
 };
