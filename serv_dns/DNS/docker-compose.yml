@@ -2,8 +2,8 @@ version: '2'
 
 services :
   soa:
-    image: glemer/wt_dns2in1:latest
-    container_name: dns2in1
+    image: glemer/wt_dns:latest
+    container_name: dns
     ports:
       - "53:53/tcp"
       - "53:53/udp"

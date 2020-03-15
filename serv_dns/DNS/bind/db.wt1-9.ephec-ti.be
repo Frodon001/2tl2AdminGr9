@@ -11,11 +11,15 @@ $TTL    604800
 ; name servers - NS record
 @				IN	NS			ns.wt1.ephec-ti.be.
 
+; VPS
+VpsGuillaume			IN	A		51.178.41.108
+VpsArnaud               IN  A       51.178.41.107
+VpsFlorent              IN  A       51.178.41.95
+
 ; name servers - A record
-ns 				IN	A				51.178.41.108
+ns 		        	IN	CNAME	VpsGuillaume
 
 ; web services
-serverWeb			IN	A		51.178.41.108
-www					IN	CNAME	serverWeb
+www					IN	CNAME	VpsGuillaume
 
 ; mail services
