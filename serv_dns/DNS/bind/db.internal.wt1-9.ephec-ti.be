@@ -1,6 +1,6 @@
-$ORIGIN wt1-9.ephec-ti.be
+$ORIGIN wt2-9.ephec-ti.be
 $TTL    604800
-@       IN      SOA     ns.wt1-9.ephec-ti.be. admin.wt1-9.ephec-ti.be. (
+@       IN      SOA     ns.wt2-9.ephec-ti.be. admin.wt2-9.ephec-ti.be. (
                      2006020201 ; Serial
                          604800 ; Refresh
                           86400 ; Retry
@@ -9,7 +9,7 @@ $TTL    604800
 ;
 
 ; name servers - NS record
-@				IN	NS			ns.wt1.ephec-ti.be.
+@				IN	NS			ns.wt2-9.ephec-ti.be.
 
 ; VPS
 VpsGuillaume			IN	A		51.178.41.108
