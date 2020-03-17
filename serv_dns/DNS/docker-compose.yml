@@ -2,7 +2,7 @@ version: '2'
 
 services :
   soa:
-    image: glemer/woodytoys-groupe9:dns
+    image: glemer/wt_dns
     container_name: dns
     ports:
       - "53:53/tcp"
