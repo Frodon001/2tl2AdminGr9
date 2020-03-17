@@ -1,13 +1,12 @@
 ## HOW TO USE
 
-### Récupération du docker glemer/wt_web
+### Récupération du docker glemer/woodytoys-groupe9:web
 Docker pull glemer/wt_web
 
-### lancement du docker
-docker build -t apache_serv .
 
 ### lancement du docker
-docker run  -p 80:80 --name apache_serv  apache_serv
+docker run  -p 80:80 -d --name apache_serv glemer/woodytoys-groupe9:web 
 
 ## accès au site a l'adresse
-http://localhost:80
+51.178.41.108
+
