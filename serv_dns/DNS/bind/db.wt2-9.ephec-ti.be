@@ -21,5 +21,6 @@ ns 		        	IN	CNAME	VpsGuillaume
 
 ; web services
 www					IN	CNAME	VpsGuillaume
+b2b                 IN  CNAME   VpsGuillaume
 
 ; mail services
