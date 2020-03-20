@@ -8,15 +8,13 @@ $TTL    604800
                          604800); Negative Cache TTL
 ;
 
-; name servers - NS record
-@				IN	NS			ns.wt2-9.ephec-ti.be.
-
 ; VPS
 VpsGuillaume			IN	A		51.178.41.108
 VpsArnaud               IN  A       51.178.41.107
 VpsFlorent              IN  A       51.178.41.95
 
-; name servers - A record
+; name servers
+@				IN	NS			ns.wt2-9.ephec-ti.be.
 ns 		        	IN	CNAME	VpsGuillaume
 
 ; web services

@@ -18,6 +18,8 @@ view "internal" {
 };
 view "external" {
     match-clients { any; };
+    recursion no;
+    match-clients { any; };
     zone "wt2-9.ephec-ti.be" {
         type master;
         file "/etc/bind/db.wt1-9.ephec-ti.be";
