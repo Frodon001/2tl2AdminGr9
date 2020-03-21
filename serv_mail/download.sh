@@ -6,4 +6,4 @@ curl -o docker-compose.yml https://raw.githubusercontent.com/tomav/docker-mailse
 
 curl -o .env https://raw.githubusercontent.com/tomav/docker-mailserver/master/.env.dist
 
-curl -o env-mailserver https://raw.githubusercontent.com/tomav/docker-mailserver/master/env-mailserver.dist
+curl -o env_mailserver https://raw.githubusercontent.com/tomav/docker-mailserver/master/env-mailserver.dist
