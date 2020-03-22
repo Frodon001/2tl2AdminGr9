@@ -2,12 +2,10 @@ acl internals {
     51.178.41.108;
     51.178.41.107;
     51.178.41.95;
-    127.0.0.0/8;
-    10.0.0.0/24;
     localhost;
 };
 
-view "internal" {
+view internal {
     match-clients { internals; };
     recursion yes;
     allow-recursion { internals; };
@@ -16,12 +14,10 @@ view "internal" {
         file "/etc/bind/db.internal.wt2-9.ephec-ti.be";
     };
 };
-view "external" {
-    match-clients { any; };
-    recursion no;
+view external {
     match-clients { any; };
     zone "wt2-9.ephec-ti.be" {
         type master;
-        file "/etc/bind/db.wt1-9.ephec-ti.be";
+        file "/etc/bind/db.wt2-9.ephec-ti.be";
     };
 };
