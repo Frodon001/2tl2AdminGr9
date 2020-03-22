@@ -1,4 +1,4 @@
-$ORIGIN wt2-9.ephec-ti.be
+$ORIGIN wt2-9.ephec-ti.be.
 $TTL    604800
 @       IN      SOA     ns.wt2-9.ephec-ti.be. admin.wt2-9.ephec-ti.be. (
                      2006020201 ; Serial
@@ -8,26 +8,19 @@ $TTL    604800
                          604800); Negative Cache TTL
 ;
 
-; VPS
-VpsGuillaume			IN	A		51.178.41.108
-VpsArnaud               IN  A       51.178.41.107
-VpsFlorent              IN  A       51.178.41.95
-
 ; name servers - NS record
 @				IN	NS			ns.wt2-9.ephec-ti.be.
-@               IN  MX          10      mail
+@               IN  MX          10      51.178.41.95
 
 ; name servers - A record
-ns 				IN	CNAME			VpsGuillaume
-
-; name servers - A record
-ns 		        	IN	CNAME	VpsGuillaume
+ns 		        	IN	A	51.178.41.108
 
 ; web services
-www					IN	CNAME	VpsGuillaume
+servWeb             IN  A       51.178.41.108
+www					IN	CNAME	servWeb
 
 ; mail services
-mail                IN  CNAME   VpsFlorent
+mail                IN  CNAME   51.178.41.95
 smtp                IN  CNAME   mail
 pop3                IN  CNAME   mail
 imap                IN  CNAME   mail
