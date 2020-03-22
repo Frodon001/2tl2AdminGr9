@@ -10,7 +10,7 @@ $TTL    604800
 
 ; name servers - NS record
 @				IN	NS			ns.wt2-9.ephec-ti.be.
-@               IN  MX          10      51.178.41.95
+@               IN  MX          10      mail
 
 ; name servers - A record
 ns 		        	IN	A	51.178.41.108
