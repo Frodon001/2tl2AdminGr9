@@ -10,7 +10,7 @@ CREATE TABLE produits (
                           id int primary key not null AUTO_INCREMENT,
                           name  varchar(25),
                           categ varchar(15),
-                          stock  int,
+                          stock  int
 );
 
 
