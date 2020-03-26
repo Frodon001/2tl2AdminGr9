@@ -15,3 +15,7 @@ services:
 
     expose:
       - '3306'
+
+    volumes:
+    - mysql-data:/var/lib/mysql
+    - ./sql-scripts/:/docker-entrypoint-initdb.d
