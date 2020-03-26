@@ -1,12 +1,12 @@
 Mise en place environnement
 
 mkdir DB
-Cd DB
+cd DB
 mkdir sql-scripts
 
 Récupérer les fichiers sql
 
-curl -o 
+curl -o download.sh https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/download.sh
 
 Lancer le serveur
 
