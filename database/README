@@ -1,0 +1,14 @@
+Mise en place environnement
+
+mkdir DB
+Cd DB
+mkdir sql-scripts
+
+Récupérer les fichiers sql
+
+curl -o 
+
+Lancer le serveur
+
+docker-compose up -d
+
