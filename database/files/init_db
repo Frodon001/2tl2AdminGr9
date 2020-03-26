@@ -10,11 +10,11 @@ service mysql start
 mysql -u root --password=user1234
 
 # create the default database from the ADDed file.
-mysql --password=your_password < /tmp/db_schema.sql
-mysql --password=your_password < /tmp/db_basisinfo.sql
+mysql --password=user1234 < /tmp/db_schema.sql
+mysql --password=user1234 < /tmp/db_basisinfo.sql
 
 # Tell the MySQL daemon to shutdown.
-mysqladmin --password=your_password shutdown
+mysqladmin --password=user1234 shutdown
 
 # create a tar file with the database as it currently exists
 tar czvf default_mysql.tar.gz /var/lib/mysql

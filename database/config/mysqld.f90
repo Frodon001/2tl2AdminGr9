@@ -4,7 +4,7 @@
 # You can copy this to one of:
 # - "/etc/mysql/my.cnf" to set global options,
 # - "~/.my.cnf" to set user-specific options.
-# 
+#
 # One can use all long options that the program supports.
 # Run program with --help to get a list of available options and with
 # --print-defaults to see which it would actually understand and use.
@@ -21,46 +21,46 @@
 # The following values assume you have at least 32M ram
 
 [mysqld_safe]
-socket		= /var/run/mysqld/mysqld.sock
-nice		= 0
+socket = /var/run/mysqld/mysqld.sock
+nice = 0
 
 [mysqld]
 #
 # * Basic Settings
 #
-user		= mysql
-pid-file	= /var/run/mysqld/mysqld.pid
-socket		= /var/run/mysqld/mysqld.sock
-port		= 3306
-basedir		= /usr
-datadir		= /var/lib/mysql
-tmpdir		= /tmp
-lc-messages-dir	= /usr/share/mysql
+user = mysql
+pid-file = /var/run/mysqld/mysqld.pid
+socket = /var/run/mysqld/mysqld.sock
+port = 3306
+basedir = /usr
+datadir = /var/lib/mysql
+tmpdir = /tmp
+lc-messages-dir = /usr/share/mysql
 skip-external-locking
 skip-host-cache
 skip-name-resolve
 #
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
-bind-address		= 0.0.0.0
+bind-address = 0.0.0.0
 #
 # * Fine Tuning
 #
-key_buffer_size		= 16M
-max_allowed_packet	= 16M
-thread_stack		= 192K
-thread_cache_size       = 8
+key_buffer_size = 16M
+max_allowed_packet = 16M
+thread_stack = 192K
+thread_cache_size = 8
 # This replaces the startup script and checks MyISAM tables if needed
 # the first time they are touched
-myisam-recover-options  = BACKUP
+myisam-recover-options = BACKUP
 #max_connections        = 100
 #table_cache            = 64
 #thread_concurrency     = 10
 #
 # * Query Cache Configuration
 #
-query_cache_limit	= 1M
-query_cache_size        = 16M
+query_cache_limit = 1M
+query_cache_size = 16M
 #
 # * Logging and Replication
 #
@@ -84,8 +84,8 @@ log_error = /var/log/mysql/error.log
 #       other settings you may need to change.
 #server-id		= 1
 #log_bin			= /var/log/mysql/mysql-bin.log
-expire_logs_days	= 10
-max_binlog_size   = 100M
+expire_logs_days = 10
+max_binlog_size = 100M
 #binlog_do_db		= include_database_name
 #binlog_ignore_db	= include_database_name
 #
@@ -104,4 +104,3 @@ max_binlog_size   = 100M
 # ssl-ca=/etc/mysql/cacert.pem
 # ssl-cert=/etc/mysql/server-cert.pem
 # ssl-key=/etc/mysql/server-key.pem
-

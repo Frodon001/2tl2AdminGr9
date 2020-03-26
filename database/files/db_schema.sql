@@ -50,9 +50,9 @@ iswork BIT NOT NULL DEFAULT 1,
 PRIMARY KEY (id_Employe)
 ) COMMENT='this is my employe table';
 
-CREATE user 'wbServer'@172.18.0.132 identified by 'wbServer';
-CREATE user 'admin'@'localhost' identified by 'administrateur';
-grant all privileges on *.* TO 'wbServer'@172.18.0.132;
+CREATE user 'b2b'@172.16.0.2 identified by 'b2b';
+CREATE user 'admin'@'localhost' identified by 'admin';
+grant all privileges on *.* TO 'b2b'@172.16.0.2;
 grant all privileges on *.* TO 'admin'@'localhost';
 
 flush privileges;

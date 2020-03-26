@@ -16,8 +16,8 @@ $TTL    604800
 ns 		        	IN	A	51.178.41.108
 
 ; web services
-servWeb             IN  A       51.178.41.108
-www					IN	CNAME	servWeb
+www                 IN  A       51.178.41.108
+b2b                 IN  A       51.178.41.107
 
 ; mail services
 mail                IN  CNAME   51.178.41.95
