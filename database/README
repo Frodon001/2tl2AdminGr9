@@ -19,6 +19,6 @@ docker exec -it database_db_1 bash -l
 mysql -u user -p
 (password: user1234)
 ### sélectionner la db
-user db;
+use db;
 ### requetes a la demande en mysql
 show tables;
