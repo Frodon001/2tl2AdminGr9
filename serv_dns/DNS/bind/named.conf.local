@@ -9,7 +9,6 @@ view internal {
     match-clients { internals; };
     recursion yes;
     allow-recursion { internals; };
-    allow-transfer {"none";};
     zone "wt2-9.ephec-ti.be" {
         type master;
         file "/etc/bind/db.internal.wt2-9.ephec-ti.be";
