@@ -16,6 +16,7 @@ view internal {
 };
 view external {
     match-clients { any; };
+    allow-transfer {"none";};
     zone "wt2-9.ephec-ti.be" {
         type master;
         file "/etc/bind/db.wt2-9.ephec-ti.be";
