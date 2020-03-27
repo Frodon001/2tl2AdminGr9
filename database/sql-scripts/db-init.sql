@@ -1,16 +1,18 @@
 CREATE TABLE employees (
-                           id int primary key not null AUTO_INCREMENT,
+                           id int not null AUTO_INCREMENT,
                            name varchar(25),
                            last_name  varchar(25),
                            department varchar(15),
-                           email  varchar(50)
+                           email  varchar(50),
+                           primary key (id)
 );
 
 CREATE TABLE produits (
-                          id int primary key not null AUTO_INCREMENT,
+                          id int not null AUTO_INCREMENT,
                           name  varchar(25),
                           categ varchar(15),
-                          stock  int
+                          stock  int,
+                          primary key(id)
 );
 
 
