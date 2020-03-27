@@ -3,9 +3,9 @@ $TTL    604800
 @       IN      SOA     ns.wt2-9.ephec-ti.be. admin.wt2-9.ephec-ti.be. (
                      2006020201 ; Serial
                          604800 ; Refresh
-                          86400 ; Retry
+                          7200 ; Retry
                         2419200 ; Expire
-                         604800); Negative Cache TTL
+                         86400); Negative Cache TTL
 ;
 
 ; name servers - NS record
@@ -20,7 +20,7 @@ www                 IN  A       51.178.41.108
 b2b                 IN  A       51.178.41.107
 
 ; mail services
-mail                IN  CNAME   51.178.41.95
+mail                IN  A   51.178.41.95
 smtp                IN  CNAME   mail
 pop3                IN  CNAME   mail
 imap                IN  CNAME   mail

@@ -3,9 +3,9 @@ $TTL    604800
 @       IN      SOA     ns.wt2-9.ephec-ti.be. admin.wt2-9.ephec-ti.be. (
                      2006020201 ; Serial
                          604800 ; Refresh
-                          86400 ; Retry
+                          7200 ; Retry
                         2419200 ; Expire
-                         604800); Negative Cache TTL
+                         86400); Negative Cache TTL
 ;
 
 ; name servers - NS record
