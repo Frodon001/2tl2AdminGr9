@@ -38,6 +38,8 @@ RUN	\
 	&& chmod 755 /sbin/entrypoint.sh \
 	&& chown www-data:www-data ${PHP_DATA_DIR} -Rf
 
+RUN apt-get install php-mysqlnd
+
 COPY ./configs/app.conf ${APACHE_CONF_DIR}/sites-enabled/app.conf
 COPY ./configs/php.ini  ${PHP_CONF_DIR}/apache2/conf.d/custom.ini
 
