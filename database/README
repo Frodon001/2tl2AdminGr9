@@ -1,14 +1,24 @@
-Mise en place environnement
+## Mise en place environnement
 
 mkdir DB
 cd DB
-mkdir sql-scripts
 
-Récupérer les fichiers sql
+## Récupérer les fichiers sql
 
 curl -o download.sh https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/download.sh
 
-Lancer le serveur
+## Lancer le serveur
 
 docker-compose up -d
 
+## Vérifier la base de donnée
+
+### rentrer dans le docker en bash
+docker exec -it database_db_1 bash -l
+### loggin mysql
+mysql -u user -p
+(password: user1234)
+### sélectionner la db
+user db;
+### requetes a la demande en mysql
+show tables;
