@@ -1,0 +1,58 @@
+version : '2'
+
+services :
+
+  Directeur:
+    image: ubuntu:latest
+    container_name: Directeur
+    networks:
+      woody_Direction:
+        ipv4_address: 172.16.1.1
+
+  Secretaire:
+    image: ubuntu:latest
+    container_name: Secretaire
+    networks:
+      woody_Direction:
+        ipv4_address: 172.16.1.100
+
+  Administration:
+    image: ubuntu:latest
+    container_name: Administration
+    networks:
+      woody_Administration:
+        ipv4_address: 172.16.2.1
+
+  Marketing:
+    image: ubuntu:latest
+    container_name: Marketing
+    networks:
+      woody_Administration:
+        ipv4_address: 172.16.2.100
+
+  Atelier:
+    image: ubuntu:latest
+    container_name: Atelier
+    networks:
+      woody_Atelier:
+        ipv4_address: 172.19.3.1
+
+networks:
+  Direction:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.1.0/24
+  Administration:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.2.0/24
+  Atelier:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.3.0/24
