@@ -6,35 +6,35 @@ services :
     image: ubuntu:latest
     container_name: Directeur
     networks:
-      woody_Direction:
+      Direction:
         ipv4_address: 172.16.1.1
 
   Secretaire:
     image: ubuntu:latest
     container_name: Secretaire
     networks:
-      woody_Direction:
+      Direction:
         ipv4_address: 172.16.1.100
 
   Administration:
     image: ubuntu:latest
     container_name: Administration
     networks:
-      woody_Administration:
+      Administration:
         ipv4_address: 172.16.2.1
 
   Marketing:
     image: ubuntu:latest
     container_name: Marketing
     networks:
-      woody_Administration:
+      Administration:
         ipv4_address: 172.16.2.100
 
   Atelier:
     image: ubuntu:latest
     container_name: Atelier
     networks:
-      woody_Atelier:
+      Atelier:
         ipv4_address: 172.19.3.1
 
 networks:
