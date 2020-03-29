@@ -2,7 +2,7 @@
 
 echo "Hello World";
 
-$servername = "0.0.0.0:3306";
+$servername = "localhost";
 $username = "user";
 $password = "user1234";
 $dbname = "db";
