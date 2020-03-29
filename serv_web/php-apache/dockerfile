@@ -45,6 +45,6 @@ COPY ./configs/php.ini  ${PHP_CONF_DIR}/apache2/conf.d/custom.ini
 
 WORKDIR /var/www/app/
 
-EXPOSE 80 443
+EXPOSE 80
 
 CMD ["/sbin/entrypoint.sh"]

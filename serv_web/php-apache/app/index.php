@@ -1,5 +1,8 @@
 <?php
-$servername = "127.0.0.1";
+
+echo "Hello World";
+
+$servername = "localhost";
 $username = "user";
 $password = "user1234";
 $dbname = "db";
