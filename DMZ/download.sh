@@ -2,7 +2,6 @@
 # mise a jour des images dockers
 docker pull glemer/wt_dns:latest
 docker pull httpd:2.4:latest
-docker pull glemer/wt_db:latest
 
 # download docker-compose
 curl -o docker-compose.yml https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/docker-compose.yml
@@ -15,7 +14,3 @@ curl -o bind/db.internal.wt2-9.ephec-ti.be https://raw.githubusercontent.com/Fro
 curl -o bind/db.wt2-9.ephec-ti.be https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/serv_dns/DNS/bind/db.wt2-9.ephec-ti.be
 # download Vitrine files
 curl -o public_html/index.html https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/serv_web/vitrine/public_html/index.html
-# download DB files
-curl -o sql-scripts/CreateTable.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/sql-scripts/CreateTable.sql
-curl -o sql-scripts/InsertData.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/sql-scripts/InsertData.sql
-curl -o sql-scripts/db-init.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/sql-scripts/db-init.sql

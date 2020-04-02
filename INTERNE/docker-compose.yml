@@ -1,6 +1,25 @@
 version : '2'
 
 services :
+  db:
+    image: glemer/wt_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'user1234'
+      MYSQL_ROOT_PASSWORD: 'user1234'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./sql-scripts/:/docker-entrypoint-initdb.d
+    networks:
+      db_net:
+        - ipv4_address: 172.16.99.1
+
 
   Directeur:
     image: ubuntu:latest
@@ -37,6 +56,10 @@ services :
       Atelier:
         ipv4_address: 172.19.3.1
 
+volumes:
+  mysql-data:
+    name: mysql-data
+
 networks:
   Direction:
     driver: bridge
@@ -56,3 +79,9 @@ networks:
       driver: default
       config:
         - subnet: 172.16.3.0/24
+  db_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.99.0/24
