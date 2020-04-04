@@ -1,21 +1,9 @@
-# Run avec : docker-compose up -d mail
+# Image docker server mail Postfix 
 
-# Pour ajouter un compte mail :
-docker run --rm \
-  -e MAIL_USER=user1@domain.tld \
-  -e MAIL_PASS=mypassword \
-  -ti tvial/docker-mailserver:latest \
-  /bin/sh -c 'echo "$MAIL_USER|$(doveadm pw -s SHA512-CRYPT -u $MAIL_USER -p $MAIL_PASS)"' >> config/postfix-accounts.cf
 
-Les comptes mails se trouvent dans config/postfix-accounts.cf
-Les mots de passe sont cryptés avec SHA512-CRYPT
 
-# Ports utilisés :
+    > docker build -t wt2-9.ephec-ti.be/mail .
+    > mkdir maildirs
+    > docker run -p 25:25 -v `pwd`/maildirs:/var/mail wt2-9.ephec-ti.be/mail
 
-## 25, il reçoit les mails d’autres serveur mail
-## 143, STARTTLS IMAP client
-## 587, Soumission par e-mail du client TLS
-## 995, client TLS / SSL POP3
-
-Remarque: le port 25 sert uniquement à recevoir des e-mails d'autres serveurs de messagerie et non à envoyer des e-mails. On peut utiliser le port 587 pour cela.
-
+## configurer une entrée DNS inversée pointant vers le nom d'hôte de notre serveur de messagerie.
