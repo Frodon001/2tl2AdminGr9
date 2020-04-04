@@ -8,4 +8,3 @@ services :
       - "80:80/tcp"
     volumes:
       - ./public_html/:/usr/local/apache2/htdocs/
-    networks:

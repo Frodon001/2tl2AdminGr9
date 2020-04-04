@@ -1,0 +1,9 @@
+version: '3.6'
+
+services:
+  web2in1:
+    image: glemer/wt_web2in1
+    container_name: web2in1
+    ports:
+    - "80:80/tcp"
+    - "443:443/tcp"
