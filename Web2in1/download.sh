@@ -1,6 +1,10 @@
 
 # mise a jour des images dockers
 docker pull glemer/wt_web2in1:latest
+
+mkdir app/b2b
+mkdir app/vitrine
+mkdir configs
 # download docker-compose
 curl -o docker-compose.yml https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/Web2in1/docker-compose.yml
 # download configs
