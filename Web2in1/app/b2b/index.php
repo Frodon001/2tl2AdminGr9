@@ -1,6 +1,6 @@
 <?php
 
-echo "Hello World";
+echo "Hello World <br />";
 
 $servername = "db_db_1";
 $username = "user";
@@ -8,7 +8,10 @@ $password = "user1234";
 $dbname = "db";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect("db", "user", "user1234");
+
+echo "Connected to MySQL<br />";
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -28,4 +31,6 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
+
+phpinfo();
 ?>

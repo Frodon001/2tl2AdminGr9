@@ -7,8 +7,8 @@ services:
     ports:
       - "80:80/tcp"
       - "443:443/tcp"
-    links:
-      - "db:database"
+    networks:
+      - web-db-net
 
 
   db:
@@ -31,6 +31,12 @@ services:
       - mysql-data:/var/lib/mysql
       - ./sql-scripts/:/docker-entrypoint-initdb.d
 
+    networks:
+      - web-db-net
+
 volumes:
   mysql-data:
     name: mysql-data
+
+networks:
+  web-db-net:
