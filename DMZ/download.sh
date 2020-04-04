@@ -1,8 +1,12 @@
 
 # mise a jour des images dockers
 docker pull glemer/wt_dns:latest
-docker pull httpd:2.4:latest
 docker pull glemer/wt_db:latest
+
+mkdir app/b2b
+mkdir app/vitrine
+mkdir configs
+mkdir sql-scripts
 # download docker-compose
 curl -o docker-compose.yml https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/docker-compose.yml
 # download DNS files
@@ -12,9 +16,10 @@ curl -o bind/named.conf.local https://raw.githubusercontent.com/Frodon001/2tl2Ad
 curl -o bind/named.conf.options https://raw.githubusercontent.com/AdrienNini/ProjetAdmin/master/dns/SOA/config/named.conf.options
 curl -o bind/db.internal.wt2-9.ephec-ti.be https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/serv_dns/DNS/bind/db.internal.wt2-9.ephec-ti.be
 curl -o bind/db.wt2-9.ephec-ti.be https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/serv_dns/DNS/bind/db.wt2-9.ephec-ti.be
-# download Vitrine files
-curl -o public_html/index.html https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/serv_web/vitrine/public_html/index.html
-# download DB files
-curl -o sql-scripts/CreateTable.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/sql-scripts/CreateTable.sql
-curl -o sql-scripts/InsertData.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/sql-scripts/InsertData.sql
-curl -o sql-scripts/db-init.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/sql-scripts/db-init.sql
+curl -o configs/app.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/Web2in1/configs/app.conf
+curl -o configs/php.ini https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/Web2in1/configs/php.ini
+# download web files
+curl -o app/b2b/index.php https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/Web2in1/app/b2b/index.php
+curl -o app/vitrine/index.html https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/Web2in1/app/vitrine/index.html
+# download fichiers DB
+curl -o sql-scripts/db-init.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/sql-scripts/db-init.sqlnit.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/sql-scripts/db-init.sql

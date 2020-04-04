@@ -1,6 +1,7 @@
 
 # mise a jour des images dockers
 docker pull glemer/wt_web2in1:latest
+docker pull glemer/wt_db:latest
 
 mkdir app/b2b
 mkdir app/vitrine
