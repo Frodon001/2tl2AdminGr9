@@ -7,6 +7,8 @@ cd DB
 
 curl -o download.sh https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/database/download.sh
 
+chmod 777 download.sh
+
 ## Lancer le serveur
 
 docker-compose up -d
