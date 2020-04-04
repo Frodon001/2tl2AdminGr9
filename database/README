@@ -13,6 +13,9 @@ chmod 777 download.sh
 
 docker-compose up -d
 
+docker exec -i db_db_1 mysql -uuser -puser1234 db < sql-scripts/db-init.sql
+
+
 ## Vérifier la base de donnée
 
 ### rentrer dans le docker en bash
