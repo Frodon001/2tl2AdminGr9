@@ -1,40 +1,44 @@
-from ubuntu:16.04
+FROM ubuntu:16.04
 
-run apt-get update
-run apt-get install -q -y language-pack-fr
-run update-locale LANG=fr_BE.UTF-8
+MAINTAINER dev<dev@localhost.com> 
 
-run echo mail > /etc/hostname
-add etc-hosts.txt /etc/hosts
+ENV DEBIAN_FRONTEND noninteractive 
+RUN apt-get update
+RUN echo "postfix postfix/main_mailer_type string Internet site" > preseed.txt
+RUN echo "postfix postfix/mailname string wt2-9.ephec-ti.be" >> preseed.txt
+RUN debconf-set-selections preseed.txt
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -q -y postfix
+
+RUN echo mail > /etc/hostname
+ADD etc-hosts.txt /etc/hosts
 run chown root:root /etc/hosts
 
-run apt-get install -q -y vim
+RUN apt-get -y install postfix supervisor sasl2-bin opendkim opendkim-tools mailutils vim language-pack-fr
+RUN update-locale LANG=fr_BE.UTF-8
 
-# Install Postfix.
-run echo "postfix postfix/main_mailer_type string Internet site" > preseed.txt
-run echo "postfix postfix/mailname string wt2-9.ephec-ti.be" >> preseed.txt
-# Use Mailbox format.
-run debconf-set-selections preseed.txt
-run DEBIAN_FRONTEND=noninteractive apt-get install -q -y postfix
+RUN postconf -e 'myhostname=mail.wt2-9.ephec-ti.be'
+RUN postconf -e 'mydestination= mail.wt2-9.ephec-ti.be, ephec-ti.be, localhost.localdomain, localhost'
+RUN postconf -e mail_spool_directory="/var/spool/mail/"
+RUN postconf -e mailbox_command=""
+RUN postconf -e compatibility_level=2
+RUN postconf -e 'smtp_sasl_auth_enable = yes' 
+RUN postconf -e 'smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd' 
+RUN postconf -e 'smtp_sasl_security_options =' 
+RUN echo "wt2-9.ephec-ti.be devuser@wt2-9.ephec-ti.be" > /etc/postfix/sasl_passwd 
+RUN postmap /etc/postfix/sasl_passwd 
 
-run postconf -e myhostname=mail.wt2-9.ephec-ti.be
-run postconf -e mydestination="mail.wt2-9.ephec-ti.be, ephec-ti.be, localhost.localdomain, localhost"
-run postconf -e mail_spool_directory="/var/spool/mail/"
-run postconf -e mailbox_command=""
 
-# Add a local user to receive mail at florent.wt2-9.ephec-ti.be, with a delivery directory
-# (for the Mailbox format).
-run useradd -s /bin/bash florent
-run mkdir /var/spool/mail/florent
-run chown florent:mail /var/spool/mail/florent
+RUN useradd -s /bin/bash florent
+RUN mkdir /var/spool/mail/florent
+RUN chown florent:mail /var/spool/mail/florent
 
-add etc-aliases.txt /etc/aliases
-run chown root:root /etc/aliases
-run newaliases
 
-# Use syslog-ng to get Postfix logs (rsyslog uses upstart which does not seem
-# to run within Docker).	
-run apt-get install -q -y syslog-ng
+ADD etc-aliases.txt /etc/aliases
+RUN chown root:root /etc/aliases
+RUN newaliases
 
-expose 25
-cmd ["sh", "-c", "service syslog-ng start ; service postfix start ; tail -F /var/log/mail.log"]
+
+ADD postfix.sh /opt/postfix.sh 
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf 
+EXPOSE 22 25 110 143 465 587 993 995 
+CMD ["sh", "-c", "/usr/bin/supervisord","service postfix start"] 
