@@ -2,8 +2,9 @@ FROM ubuntu:16.04
 
 MAINTAINER dev<dev@localhost.com> 
 
+
 ENV DEBIAN_FRONTEND noninteractive 
-RUN apt-get update
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN echo "postfix postfix/main_mailer_type string Internet site" > preseed.txt
 RUN echo "postfix postfix/mailname string wt2-9.ephec-ti.be" >> preseed.txt
 RUN debconf-set-selections preseed.txt
@@ -42,3 +43,6 @@ ADD postfix.sh /opt/postfix.sh
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf 
 EXPOSE 22 25 110 143 465 587 993 995 
 CMD ["sh", "-c", "/usr/bin/supervisord","service postfix start"] 
+
+
+
