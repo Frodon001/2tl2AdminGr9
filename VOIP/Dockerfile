@@ -1,4 +1,9 @@
 
+
+#
+# https://www.networklab.fr/configuration-basique-dasterisk/
+#
+
 #Download base image ubuntu 16.04
 FROM ubuntu:16.04
 
