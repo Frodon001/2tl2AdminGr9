@@ -27,7 +27,7 @@ RUN postconf -e 'smtp_sasl_security_options ='
 RUN echo "wt2-9.ephec-ti.be devuser@wt2-9.ephec-ti.be" > /etc/postfix/sasl_passwd 
 RUN postmap /etc/postfix/sasl_passwd 
 
-RUN postconf -e 's/inet_interfaces=localhost/inet_interfaces = all/'
+#RUN postconf -e 's/inet_interfaces=localhost/inet_interfaces = all/'
 
 RUN useradd -s /bin/bash florent
 RUN mkdir /var/spool/mail/florent

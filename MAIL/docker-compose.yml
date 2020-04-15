@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+ mail:
+  image: frodon001/fjanssens-wt_mail:latest
+  container_name: mail
+  restart: always
+  ports:
+   - "22:22/tcp"
+   - "25:25/tcp"
+   - "110:110/tcp"
+   - "143:143/tcp"
+   - "465:465/tcp"
+   - "587:587/tcp"
+   - "993:993/tcp"
+   - "995:995/tcp"
