@@ -4,7 +4,7 @@ Projet Administration système 2
 ## Enoncé
 Pans le cadre d'un projet a l'EPHEC, il nous est demandé de mettre en place l'infrastructure réseau de l'entreprise fictive "WoodyToys".
 
-## Groupes
+## Groupe 2-9
 
 * Lemer Guillaume
 * Nilens Arnaud
