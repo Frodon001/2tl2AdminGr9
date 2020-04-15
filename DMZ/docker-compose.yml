@@ -17,7 +17,7 @@ services :
       - ./bind/db.internal.wt2-9.ephec-ti.be:/etc/bind/db.wt2-9.ephec-ti.internal.be
     networks:
       DMZ:
-        ipv4_address: 172.16.0.1
+        ipv4_address: 172.16.0.2
 
   web2in1:
     image: glemer/wt_web2in1
@@ -28,9 +28,9 @@ services :
       - "443:443/tcp"
     networks:
       web-db-net:
-        ipv4_address: 172.16.99.1
+        ipv4_address: 172.16.99.2
       DMZ:
-        ipv4_address: 172.16.0.1
+        ipv4_address: 172.16.0.3
 
   db:
     image: glemer/wt_db
@@ -49,7 +49,7 @@ services :
       - ./sql-scripts/:/docker-entrypoint-initdb.d
     networks:
       web-db-net:
-        ipv4_address: 172.16.99.2
+        ipv4_address: 172.16.99.3
 
 volumes:
   mysql-data:

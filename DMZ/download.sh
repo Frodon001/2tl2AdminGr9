@@ -8,6 +8,7 @@ mkdir app
 mkdir app/b2b
 mkdir app/vitrine
 mkdir configs
+mkdir bind
 mkdir sql-scripts
 # download docker-compose
 curl -o docker-compose.yml https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/docker-compose.yml
