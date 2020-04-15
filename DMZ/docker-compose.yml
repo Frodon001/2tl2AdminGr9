@@ -28,7 +28,7 @@ services :
       web-db-net:
         - ipv4_address: 172.16.99.1
       DMZ:
-        - ipv4_address: 172.16.0.2
+        - ipv4_address: 172.16.0.1
 
   db:
     image: glemer/wt_db
