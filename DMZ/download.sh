@@ -4,6 +4,7 @@ docker pull glemer/wt_dns:latest
 docker pull glemer/wt_web2in1:latest
 docker pull glemer/wt_db:latest
 
+mkdir app
 mkdir app/b2b
 mkdir app/vitrine
 mkdir configs
