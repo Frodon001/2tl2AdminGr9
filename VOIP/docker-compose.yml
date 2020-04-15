@@ -1,0 +1,18 @@
+
+version : '3.2'
+
+services :
+  voip:
+    image: glemer/wt_voip:latest
+    container_name: voip
+    ports:
+      - "5060:5060/tcp"
+      - "5060:5060/udp"
+    volumes:
+      - ./conf/extensions.conf:/etc/asterisk/extensions.conf
+      - ./conf/logger.conf:/etc/asterisk/logger.conf
+      - ./conf/sip.conf:/etc/asterisk/sip.conf
+      - ./conf/users.conf:/etc/asterisk/users.conf
+      - ./conf/voicemail.conf:/etc/asterisk/voicemail.conf
+      - ./conf/iax.conf:/etc/asterisk/iax.conf
+      - ./conf/queues.conf:/etc/asterisk/queues.conf
