@@ -6,7 +6,7 @@ Pans le cadre d'un projet a l'EPHEC, il nous est demandé de mettre en place l'i
 
 ## Groupe 2-9
 
-* Lemer Guillaume  `vps798000.ovh.net
+* Lemer Guillaume  `vps798000.ovh.net`
 * Nilens Arnaud.   `vps798001.ovh.net`
 * Janssens Florent `vps798002.ovh.net`
 
