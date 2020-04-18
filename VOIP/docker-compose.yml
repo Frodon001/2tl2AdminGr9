@@ -8,6 +8,7 @@ services :
     ports:
       - "5060:5060/tcp"
       - "5060:5060/udp"
+      - "15000-15010/udp"
     volumes:
       - ./conf/extensions.conf:/etc/asterisk/extensions.conf
       - ./conf/logger.conf:/etc/asterisk/logger.conf

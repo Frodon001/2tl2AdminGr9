@@ -17,10 +17,15 @@ ns 		        	IN	A	51.178.41.108
 
 ; web services
 www                 IN  A       51.178.41.108
-b2b                 IN  A       51.178.41.107
+b2b                 IN  A       51.178.41.108
 
 ; mail services
 mail                IN  A   51.178.41.95
 smtp                IN  CNAME   mail
 pop3                IN  CNAME   mail
 imap                IN  CNAME   mail
+
+; voip service
+_sip._udp		SRV	0	0	5060	sip
+_sip._tcp		SRV 0	0	5060	sip
+sip				IN	A	51.178.41.108
