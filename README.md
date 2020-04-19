@@ -11,9 +11,9 @@ Pans le cadre d'un projet a l'EPHEC, il nous est demandé de mettre en place l'i
 * Janssens Florent `vps798002.ovh.net`
 
 ## Schéma Logique
-[logique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/Sch%C3%A9maLogique.jpg)
+![logique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/Sch%C3%A9maLogique.jpg)
 ## Schéma Physique
-[physique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/Sch%C3%A9maPhysique.jpg)
+![physique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/Sch%C3%A9maPhysique.jpg)
 ## liens
 lien du rapport [Overleaf](https://www.overleaf.com/read/fsxszdmrpddk)
 
