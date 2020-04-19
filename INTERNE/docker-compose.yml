@@ -6,7 +6,7 @@ services :
     container_name: Directeur
     networks:
       Direction:
-        ipv4_address: 172.16.1.1
+        ipv4_address: 172.16.1.2
 
   SecretaireA:
     image: ubuntu:latest
@@ -27,14 +27,14 @@ services :
     container_name: AdministrationA
     networks:
       Administration:
-        ipv4_address: 172.16.2.1
+        ipv4_address: 172.16.2.2
 
   AdministrationB:
     image: ubuntu:latest
     container_name: AdministrationB
     networks:
       Administration:
-        ipv4_address: 172.16.2.2
+        ipv4_address: 172.16.2.3
 
   MarketingA:
     image: ubuntu:latest
@@ -55,14 +55,14 @@ services :
     container_name: AtelierA
     networks:
       Atelier:
-        ipv4_address: 172.19.3.1
+        ipv4_address: 172.19.3.2
 
   AtelierB:
     image: ubuntu:latest
     container_name: AtelierB
     networks:
       Atelier:
-        ipv4_address: 172.19.3.2
+        ipv4_address: 172.19.3.3
 
 networks:
   Direction:
