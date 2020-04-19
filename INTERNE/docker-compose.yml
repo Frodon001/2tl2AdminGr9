@@ -7,33 +7,61 @@ version : '2'
       Direction:
         ipv4_address: 172.16.1.1
 
-  Secretaire:
+  SecretaireA:
     image: ubuntu:latest
-    container_name: Secretaire
+    container_name: SecretaireA
     networks:
       Direction:
-        ipv4_address: 172.16.1.100
+        ipv4_address: 172.16.1.101
 
-  Administration:
+  SecretaireB:
     image: ubuntu:latest
-    container_name: Administration
+    container_name: SecretaireB
+    networks:
+      Direction:
+        ipv4_address: 172.16.1.102
+
+  AdministrationA:
+    image: ubuntu:latest
+    container_name: AdministrationA
     networks:
       Administration:
         ipv4_address: 172.16.2.1
 
-  Marketing:
+  AdministrationB:
     image: ubuntu:latest
-    container_name: Marketing
+    container_name: AdministrationB
     networks:
       Administration:
-        ipv4_address: 172.16.2.100
+        ipv4_address: 172.16.2.2
 
-  Atelier:
+  MarketingA:
     image: ubuntu:latest
-    container_name: Atelier
+    container_name: MarketingA
+    networks:
+      Administration:
+        ipv4_address: 172.16.2.101
+
+  MarketingB:
+    image: ubuntu:latest
+    container_name: MarketingB
+    networks:
+      Administration:
+        ipv4_address: 172.16.2.102
+
+  AtelierA:
+    image: ubuntu:latest
+    container_name: AtelierA
     networks:
       Atelier:
         ipv4_address: 172.19.3.1
+
+  AtelierB:
+    image: ubuntu:latest
+    container_name: AtelierB
+    networks:
+      Atelier:
+        ipv4_address: 172.19.3.2
 
 networks:
   Direction:
@@ -54,9 +82,3 @@ networks:
       driver: default
       config:
         - subnet: 172.16.3.0/24
-  db_net:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.16.99.0/24
