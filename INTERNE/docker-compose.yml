@@ -55,14 +55,14 @@ services :
     container_name: AtelierA
     networks:
       Atelier:
-        ipv4_address: 172.19.3.2
+        ipv4_address: 172.16.3.2
 
   AtelierB:
     image: ubuntu:latest
     container_name: AtelierB
     networks:
       Atelier:
-        ipv4_address: 172.19.3.3
+        ipv4_address: 172.16.3.3
 
 networks:
   Direction:
