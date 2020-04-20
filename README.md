@@ -14,10 +14,15 @@ Pans le cadre d'un projet a l'EPHEC, il nous est demandé de mettre en place l'i
 ![logique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/Sch%C3%A9maLogique.jpg)
 ## Schéma Physique
 ![physique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/Sch%C3%A9maPhysique.jpg)
+
+## Rapports
+
+* [Rapport Client](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/AdminSystem_Groupe10-Client.pdf)
+* [Rapport Technique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/AdminSystem_Groupe10-Technique.pdf)
+
+
 ## liens
 
 * lien des rapports mis a jour en continu [Overleaf](https://www.overleaf.com/read/fsxszdmrpddk)
-* [Rapport Client](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/AdminSystem_Groupe10-Client.pdf)
-* [Rapport Technique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/AdminSystem_Groupe10-Technique.pdf)
 
 * lien évaluation [googleDoc](https://docs.google.com/spreadsheets/d/1bX6_eiObLUtFMnWoalNhQwpon28-ZweBSGlTJwDpga8/edit?usp=sharing)
