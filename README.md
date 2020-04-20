@@ -15,6 +15,9 @@ Pans le cadre d'un projet a l'EPHEC, il nous est demandé de mettre en place l'i
 ## Schéma Physique
 ![physique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/Sch%C3%A9maPhysique.jpg)
 ## liens
-lien du rapport [Overleaf](https://www.overleaf.com/read/fsxszdmrpddk)
 
-lien évaluation [googleDoc](https://docs.google.com/spreadsheets/d/1bX6_eiObLUtFMnWoalNhQwpon28-ZweBSGlTJwDpga8/edit?usp=sharing)
+* lien des rapports mis a jour en continu [Overleaf](https://www.overleaf.com/read/fsxszdmrpddk)
+* [Rapport Client](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/AdminSystem_Groupe10-Client.pdf)
+* [Rapport Technique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/AdminSystem_Groupe10-Technique.pdf)
+
+* lien évaluation [googleDoc](https://docs.google.com/spreadsheets/d/1bX6_eiObLUtFMnWoalNhQwpon28-ZweBSGlTJwDpga8/edit?usp=sharing)
