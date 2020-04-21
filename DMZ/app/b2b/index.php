@@ -2,7 +2,7 @@
 
 echo "Hello World";
 
-$servername = "dmz_db_1";
+$servername = "172.16.99.3:3306";
 $username = "user";
 $password = "user1234";
 $dbname = "db";
