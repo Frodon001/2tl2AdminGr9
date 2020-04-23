@@ -1,9 +1,6 @@
 <?php
 
-echo "Hello World";
-
-
-$conn = new mysqli("mysql.wt-2.9.ephec-ti.be", "user", "user1234", "db", 3306);
+$conn = new mysqli("51.178.41.108", "user", "user1234", "db");
 
 // Check connection
 if ($conn->connect_error) {
@@ -24,4 +21,4 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
-
+?>
