@@ -2,14 +2,8 @@
 
 echo "Hello World";
 
-$servername = "172.16.99.3";
-$username = "user";
-$password = "user1234";
-$dbname = "db";
 
-// Create connection
-//$conn = new mysqli($servername, $username, $password, $dbname);
-$conn = mysqli_connect("172.16.99.3","user","user1234","db",'3306');
+$conn = new mysqli("mysql.wt-2.9.ephec-ti.be", "user", "user1234", "db", 3306);
 
 // Check connection
 if ($conn->connect_error) {
@@ -30,4 +24,4 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
-?>
+
