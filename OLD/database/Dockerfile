@@ -1,5 +1,5 @@
 # depuis l'image mysql
-FROM mysql
+FROM mysql:5.7
 
 # ajout de la db
 ENV MYSQL_DATABASE db
