@@ -26,9 +26,6 @@ services :
     ports:
       - "80:80/tcp"
       - "443:443/tcp"
-    volumes:
-      - ./app/vitrine/app.conf ${APACHE_CONF_DIR}/sites-enabled/app.conf
-      - ./app/b2b/php.ini  ${PHP_CONF_DIR}/apache2/conf.d/custom.ini
     networks:
       web-db-net:
         ipv4_address: 172.16.99.2
