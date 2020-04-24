@@ -42,6 +42,7 @@ services :
     environment:
       MYSQL_DATABASE: 'db'
       MYSQL_USER: 'user'
+      MYSQL_NATIVE_PASSWORD: 'user1234'
       MYSQL_PASSWORD: 'user1234'
       MYSQL_ROOT_PASSWORD: 'user1234'
     ports:
