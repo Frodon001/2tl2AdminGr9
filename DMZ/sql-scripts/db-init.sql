@@ -31,3 +31,5 @@ values ('cheval en bois', 'bois', 100),
        ('plaque', 'pierre', 10997),
        ('plaque', 'acier', 456),
        ('cheval en fer', 'fer', 987);
+
+alter user 'user'@'172.16.99.3' identified with mysql_native_password by 'user1234';
