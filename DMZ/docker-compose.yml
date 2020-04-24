@@ -50,6 +50,7 @@ services :
     volumes:
       - mysql-data:/var/lib/mysql
       - ./sql-scripts/:/docker-entrypoint-initdb.d
+      - ./configs/my.cnf:/etc/mysql
     networks:
       web-db-net:
         ipv4_address: 172.16.99.3
