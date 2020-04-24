@@ -24,7 +24,6 @@ curl -o bind/db.wt2-9.ephec-ti.be https://raw.githubusercontent.com/Frodon001/2t
 # download configs
 curl -o configs/app.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/configs/app.conf
 curl -o configs/php.ini https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/configs/php.ini
-curl -o configs/my.cnf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/configs/my.cnf
 # download web files
 curl -o app/b2b/index.php https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/b2b/index.php
 curl -o app/vitrine/index.html https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/vitrine/index.html
