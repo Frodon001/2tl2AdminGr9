@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli("51.178.41.108", "user", "user1234", "db");
+$conn = new mysqli("172.16.99.3", "user", "user1234", "db");
 
 // Check connection
 if ($conn->connect_error) {
