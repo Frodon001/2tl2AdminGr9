@@ -2,7 +2,7 @@ version: '3.6'
 
 services :
   DNS:
-    image: glemer/wt_dns
+    image: glemer/wt_dns:latest
     restart: always
     container_name: dns
     ports:
@@ -20,7 +20,7 @@ services :
         ipv4_address: 172.16.0.2
 
   web2in1:
-    image: glemer/wt_web2in1
+    image: glemer/wt_web2in1:latest
     restart: always
     container_name: web2in1
     ports:
@@ -36,7 +36,7 @@ services :
         ipv4_address: 172.16.0.3
 
   db:
-    image: glemer/wt_db
+    image: glemer/wt_db:latest
     restart: always
     command: --default-authentication-plugin=mysql_native_password
     environment:
@@ -55,6 +55,26 @@ services :
     networks:
       web-db-net:
         ipv4_address: 172.16.99.3
+
+  voip:
+    image: glemer/wt_voip:latest
+    container_name: voip
+    ports:
+      - "5060:5060/tcp"
+      - "5060:5060/udp"
+      - "15000-15010/udp"
+    volumes:
+      - ./voip/conf/extensions.conf:/etc/asterisk/extensions.conf
+      - ./voip/conf/logger.conf:/etc/asterisk/logger.conf
+      - ./voip/conf/sip.conf:/etc/asterisk/sip.conf
+      - ./voip/conf/users.conf:/etc/asterisk/users.conf
+      - ./voip/conf/voicemail.conf:/etc/asterisk/voicemail.conf
+      - ./voip/conf/iax.conf:/etc/asterisk/iax.conf
+      - ./voip/conf/queues.conf:/etc/asterisk/queues.conf
+      - ./voip/conf/manager.conf:/etc/asterisk/manager.conf
+    networks:
+      DMZ:
+        ipv4_address: 172.16.0.5
 
 volumes:
   mysql-data:

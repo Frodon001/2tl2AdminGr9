@@ -3,11 +3,13 @@
 docker pull glemer/wt_dns:latest
 docker pull glemer/wt_DMZ:latest
 docker pull glemer/wt_db:latest
+docker pull glemer/wt_voip:latest
 
 mkdir app
 mkdir app/b2b
 mkdir app/vitrine
 mkdir configs
+mkdir voip/conf
 mkdir bind
 mkdir sql-scripts
 # download docker-compose
@@ -29,3 +31,13 @@ curl -o app/b2b/index.php https://raw.githubusercontent.com/Frodon001/2tl2AdminG
 curl -o app/vitrine/index.html https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/vitrine/index.html
 # download fichiers DB
 curl -o sql-scripts/db-init.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/sql-scripts/db-init.sql
+
+#download fichier de config VOIP
+curl -o conf/extensions.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/extensions.conf
+curl -o conf/iax.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/iax.conf
+curl -o conf/logger.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/logger.conf
+curl -o conf/queues.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/queues.conf
+curl -o conf/sip.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/sip.conf
+curl -o conf/users.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/users.conf
+curl -o conf/voicemail.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/voicemail.conf
+curl -o conf/manager.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/manager.conf
