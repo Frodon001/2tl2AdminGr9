@@ -18,6 +18,7 @@ Pans le cadre d'un projet a l'EPHEC, il nous est demandé de mettre en place l'i
 ## Rapports
 
 * [Rapport Client](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/AdminSystem_Groupe10-Client.pdf)
+* [Rapport Sécurité](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/AdminSystem_Groupe10-Secu.pdf)
 * [Rapport Technique](https://github.com/Frodon001/2tl2AdminGr9/blob/master/documents/AdminSystem_Groupe10-Technique.pdf)
 
 
