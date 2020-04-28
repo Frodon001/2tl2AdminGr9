@@ -23,7 +23,7 @@ intranet			IN	A   	51.178.41.108
 ; mail services
 mail                IN  A   51.178.41.95
 smtp                IN  CNAME   mail
-pop3                IN  CNAME   mail
+pop                 IN  CNAME   mail
 imap                IN  CNAME   mail
 
 ; voip service
