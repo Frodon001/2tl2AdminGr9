@@ -9,6 +9,7 @@ mkdir app
 mkdir app/b2b
 mkdir app/vitrine
 mkdir configs
+mkdir voip
 mkdir voip/conf
 mkdir bind
 mkdir sql-scripts
