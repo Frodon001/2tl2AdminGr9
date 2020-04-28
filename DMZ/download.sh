@@ -34,11 +34,11 @@ curl -o app/vitrine/index.html https://raw.githubusercontent.com/Frodon001/2tl2A
 curl -o sql-scripts/db-init.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/sql-scripts/db-init.sql
 
 #download fichier de config VOIP
-curl -o conf/extensions.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/extensions.conf
-curl -o conf/iax.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/iax.conf
-curl -o conf/logger.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/logger.conf
-curl -o conf/queues.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/queues.conf
-curl -o conf/sip.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/sip.conf
-curl -o conf/users.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/users.conf
-curl -o conf/voicemail.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/voicemail.conf
-curl -o conf/manager.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/manager.conf
+curl -o voip/conf/extensions.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/extensions.conf
+curl -o voip/conf/iax.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/iax.conf
+curl -o voip/conf/logger.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/logger.conf
+curl -o voip/conf/queues.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/queues.conf
+curl -o voip/conf/sip.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/sip.conf
+curl -o voip/conf/users.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/users.conf
+curl -o voip/conf/voicemail.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/voicemail.conf
+curl -o voip/conf/manager.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/manager.conf
