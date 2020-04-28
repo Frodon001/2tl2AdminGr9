@@ -29,6 +29,7 @@ services :
     volumes:
       - ./app/b2b/:/var/www/app/b2b
       - ./app/vitrine/:/var/www/app/vitrine
+      - ./app/internal/:/var/www/app/internal
     networks:
       web-db-net:
         ipv4_address: 172.16.99.2
