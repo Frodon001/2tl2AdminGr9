@@ -8,6 +8,7 @@ docker pull glemer/wt_voip:latest
 mkdir app
 mkdir app/b2b
 mkdir app/vitrine
+mkdir app/internal
 mkdir configs
 mkdir voip
 mkdir voip/conf
