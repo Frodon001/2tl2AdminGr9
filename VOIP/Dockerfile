@@ -5,7 +5,7 @@
 #
 
 #Download base image ubuntu 16.04
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # Update Ubuntu Software repository and install asterisk
 RUN apt-get update && apt-get -y install asterisk
