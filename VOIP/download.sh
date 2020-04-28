@@ -15,3 +15,4 @@ curl -o conf/queues.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr
 curl -o conf/sip.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/conf/sip.conf
 curl -o conf/users.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/conf/users.conf
 curl -o conf/voicemail.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/conf/voicemail.conf
+curl -o conf/manager.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/conf/manager.conf

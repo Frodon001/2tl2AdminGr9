@@ -17,3 +17,4 @@ services :
       - ./conf/voicemail.conf:/etc/asterisk/voicemail.conf
       - ./conf/iax.conf:/etc/asterisk/iax.conf
       - ./conf/queues.conf:/etc/asterisk/queues.conf
+      - ./conf/manager.conf:/etc/asterisk/manager.conf
