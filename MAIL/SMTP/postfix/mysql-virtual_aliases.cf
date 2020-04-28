@@ -1,0 +1,8 @@
+hosts = 127.0.0.1
+user = root
+password = user1234
+dbname = postfix
+table = alias
+select_field = destination
+where_field = source
+additional_conditions = AND etat=1
