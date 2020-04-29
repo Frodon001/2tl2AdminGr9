@@ -42,7 +42,6 @@ RUN chown root:root /etc/aliases
 RUN newaliases
 
 
-#ADD postfix.sh /opt/postfix.sh 
-#ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf 
+
 EXPOSE 22 25 
 CMD ["sh","-c","postfix start-fg"] 
