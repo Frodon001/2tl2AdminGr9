@@ -45,4 +45,4 @@ curl -o voip/conf/sip.conf https://raw.githubusercontent.com/Frodon001/2tl2Admin
 curl -o voip/conf/users.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/users.conf
 curl -o voip/conf/voicemail.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/voicemail.conf
 curl -o voip/conf/manager.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/manager.conf
-curl -o sounds/dont-know-who-sent.sln16 https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/sounds/dont-know-who-sent.sln16
+curl -o voip/sounds/dont-know-who-sent.sln16 https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/sounds/dont-know-who-sent.sln16
