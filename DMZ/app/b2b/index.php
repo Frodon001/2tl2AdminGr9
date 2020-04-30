@@ -14,6 +14,16 @@
 
 <body>
 
+<div id = "main">
+    <form action = "" method = "post">
+        <label>Ajouter un produit :</label>
+        <input type = "text" name = "name" id = "name" />
+        <input type = "text" name = "categ" id = "categ" />
+        <input type = "number" name = "stock" id = "stock" />
+        <input type = "submit" value ="Submit" name = "submit"/>
+    </form>
+</div>
+
 <?php
 
 $conn = new mysqli("172.16.99.3", "user", "user1234", "db");
@@ -24,7 +34,7 @@ if ($conn->connect_error) {
 }
 
 if(isset($_POST["submit"])){
-    $sql = "INSERT INTO produits (name, categ, stock) VALUES ('".$_POST["name"]."', '".$_POST["categ"]."', '".$_POST["stock"]."')";
+    $sql = "INSERT INTO produits (name, categ, stock) VALUES ('".$_POST["name"]."', '".$_POST["categ"]."', ".$_POST["stock"].");";
 }
 
 $sql = "SELECT name, categ, stock FROM produits";
@@ -42,16 +52,6 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
-
-<div id = "main">
-    <form action = "" method = "post">
-        <label>Ajouter un produit :</label>
-        <input type = "text" name = "name" id = "name" />
-        <input type = "text" name = "categ" id = "categ" />
-        <input type = "number" name = "stock" id = "stock" />
-        <input type = "submit" value ="Submit" name = "submit"/>
-    </form>
-</div>
 
 <?php
 
