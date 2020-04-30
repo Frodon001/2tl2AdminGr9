@@ -11,7 +11,7 @@ $sql = "SELECT name, categ, stock FROM produits";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table style="border: 1px solid"> <tr> <th>Nom</th> <th>Categorie</th> <th>Stock</th> </tr>";
+    echo "<table style=\"border: 1px solid\"> <tr> <th>Nom</th> <th>Categorie</th> <th>Stock</th> </tr>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>".$row["name"]."</td><td>".$row["categ"]."</td><td>".$row["stock"]."</td></tr>";
