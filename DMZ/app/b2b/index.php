@@ -7,14 +7,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT name, last_name, department, email FROM employees";
+$sql = "SELECT name, categ, stock FROM produits";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table>";
+    echo "<table style="border: 1px solid"> <tr> <th>Nom</th> <th>Categorie</th> <th>Stock</th> </tr>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>".$row["name"]."</td><td>".$row["last_name"]."</td><td>".$row["department"]."</td><td>".$row["email"]."</td></tr>";
+        echo "<tr><td>".$row["name"]."</td><td>".$row["categ"]."</td><td>".$row["stock"]."</td></tr>";
     }
     echo "</table>";
 } else {
