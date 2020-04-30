@@ -13,18 +13,6 @@
 </head>
 
 <body>
-<div id = "main">
-    <form action = "" method = "post">
-        <label>Ajouter un produit :</label>
-        <input type = "text" name = "name" id = "name" />
-        <input type = "text" name = "categ" id = "categ" />
-        <input type = "text" name = "stock" id = "stock" />
-        <br>
-        <input type = "submit" value ="Submit" name = "submit"/>
-        <br>
-    </form>
-</div>
-
 
 <?php
 
@@ -54,6 +42,16 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
+
+<div id = "main">
+    <form action = "" method = "post">
+        <label>Ajouter un produit :</label>
+        <input type = "text" name = "name" id = "name" />
+        <input type = "text" name = "categ" id = "categ" />
+        <input type = "number" name = "stock" id = "stock" />
+        <input type = "submit" value ="Submit" name = "submit"/>
+    </form>
+</div>
 
 </body>
 </html>
