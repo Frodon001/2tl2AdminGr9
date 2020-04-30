@@ -3,6 +3,7 @@ docker pull glemer/wt_voip:latest
 
 #création des dossier de réception
 mkdir conf
+mkdir sounds
 
 #download docker-compose
 curl -o docker-compose.yml https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/docker-compose.yml
@@ -16,3 +17,4 @@ curl -o conf/sip.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/m
 curl -o conf/users.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/conf/users.conf
 curl -o conf/voicemail.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/conf/voicemail.conf
 curl -o conf/manager.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/conf/manager.conf
+curl -o sounds/dont-know-who-sent.sln16 https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/VOIP/sounds/dont-know-who-sent.sln16
