@@ -43,7 +43,7 @@ if(isset($_POST["submit"])){
     if($conn->query($sql)===TRUE){
         echo "Table mise à jour.";
     } else {
-        echo "Erreur : ". $sql . "<br>" . $conn->error;
+        echo "Erreur: " . $sql . "<br>" . $conn->error;
     }
 }
 
