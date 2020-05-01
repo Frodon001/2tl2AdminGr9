@@ -37,7 +37,7 @@ if(isset($_POST["submit"])){
 
     $name = $_POST["name"];
     $categ = $_POST["categ"];
-    $stock = $_POST["stock"]
+    $stock = $_POST["stock"];
     $sql = "INSERT INTO produits(name, categ, stock) VALUES('$name', '$categ', 1)";
 
     if($conn->query($sql)===TRUE){
