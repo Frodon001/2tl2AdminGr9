@@ -34,15 +34,31 @@ if ($conn->connect_error) {
 }
 
 if(isset($_POST["submit"])){
-    $sql = "INSERT INTO produits(name, categ, stock) VALUES('".$_POST["name"]."', '".$_POST["categ"]."', ".$_POST["stock"].");";
-    $stmt = mysqli_prepare($sql);
-    $stmt->execute();
 
-    if($conn->query($stmt)===TRUE){
+    $name = $_POST["name"];
+    $categ = $_POST["categ"];
+    $stock = $_POST["stock"]
+    $sql = "INSERT INTO produits(name, categ, stock) VALUES('$name', '$categ', 1)";
+
+    if($conn->query($sql)===TRUE){
         echo "Table mise à jour.";
     } else {
         echo "Erreur";
     }
+
+    $sql = "SELECT name, categ, stock FROM produits";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table> <tr> <th>Nom</th> <th>Categorie</th> <th>Stock</th> </tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>".$row["name"]."</td><td>".$row["categ"]."</td><td>".$row["stock"]."</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
 }
 
 $sql = "SELECT name, categ, stock FROM produits";
@@ -58,24 +74,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-$conn->close();
-?>
-
-<?php
-
-$conn = new mysqli("172.16.99.3", "user", "user1234", "db");
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-if(isset($_POST["submit"])){
-    $sql = "INSERT INTO produits (name, categ, stock) VALUES ('".$_POST["name"].",".$_POST["categ"].",".$_POST["stock"]."')";
-}
-
-
-
 $conn->close();
 ?>
 
