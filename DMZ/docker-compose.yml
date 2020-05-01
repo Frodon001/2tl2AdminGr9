@@ -73,7 +73,7 @@ services :
       - ./voip/conf/iax.conf:/etc/asterisk/iax.conf
       - ./voip/conf/queues.conf:/etc/asterisk/queues.conf
       - ./voip/conf/manager.conf:/etc/asterisk/manager.conf
-      - ./sounds:/var/lib/asterisk/moh
+      - ./voip/conf/features.conf:/etc/asterisk/features.conf
     networks:
       DMZ:
         ipv4_address: 172.16.0.5
