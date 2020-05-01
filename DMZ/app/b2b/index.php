@@ -34,7 +34,13 @@ if ($conn->connect_error) {
 }
 
 if(isset($_POST["submit"])){
-    $sql = "INSERT INTO produits (name, categ, stock) VALUES ('".$_POST["name"]."', '".$_POST["categ"]."', ".$_POST["stock"].");";
+    $sql = "INSERT INTO produits(name, categ, stock) VALUES('".$_POST["name"]."', '".$_POST["categ"]."', CONVERT(INT, '".$_POST["stock"]."');";
+
+    if($conn->query($sql)===TRUE){
+        echo "Table mise à jour.";
+    } else {
+        echo "Erreur";
+    }
 }
 
 $sql = "SELECT name, categ, stock FROM produits";
