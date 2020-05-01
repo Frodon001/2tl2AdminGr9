@@ -24,7 +24,7 @@
     </form>
 </div>
 
-<div id = "main">
+<div id = "main">   
     <form action = "" method = "post">
         <label>Supprimer un produit :</label>
         <input type = "text" name = "name" id = "name" />
