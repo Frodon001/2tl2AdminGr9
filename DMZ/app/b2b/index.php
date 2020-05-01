@@ -20,7 +20,7 @@
         <input type = "text" name = "name" id = "name" />
         <input type = "text" name = "categ" id = "categ" />
         <input type = "number" name = "stock" id = "stock" />
-        <input type = "add" value ="Submit" name = "submit"/>
+        <input type = "submit" value ="Submit" name = "add"/>
     </form>
 </div>
 
@@ -29,7 +29,7 @@
         <label>Supprimer un produit :</label>
         <input type = "text" name = "name" id = "name" />
         <input type = "text" name = "categ" id = "categ" />
-        <input type = "delete" value ="Submit" name = "submit"/>
+        <input type = "submit" value ="Submit" name = "delete"/>
     </form>
 </div>
 
