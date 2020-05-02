@@ -4,6 +4,9 @@ services :
   Directeur:
     image: ubuntu:latest
     container_name: Directeur
+    stdin_open: true
+      tty: true
+      restart: always
     networks:
       Direction:
         ipv4_address: 172.16.1.2
@@ -11,6 +14,9 @@ services :
   Secretaire:
     image: ubuntu:latest
     container_name: Secretaire
+    stdin_open: true
+      tty: true
+      restart: always
     networks:
       Direction:
         ipv4_address: 172.16.1.101
@@ -18,6 +24,9 @@ services :
   comptableA:
     image: ubuntu:latest
     container_name: comptableA
+    stdin_open: true
+      tty: true
+      restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.2
@@ -25,6 +34,9 @@ services :
   comptableB:
     image: ubuntu:latest
     container_name: comptableB
+    stdin_open: true
+      tty: true
+      restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.3
@@ -32,6 +44,9 @@ services :
   CommercialA:
     image: ubuntu:latest
     container_name: CommercialA
+    stdin_open: true
+      tty: true
+      restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.101
@@ -39,6 +54,9 @@ services :
   CommercialB:
     image: ubuntu:latest
     container_name: CommercialB
+    stdin_open: true
+      tty: true
+      restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.102
@@ -46,6 +64,9 @@ services :
   AtelierA:
     image: ubuntu:latest
     container_name: AtelierA
+    stdin_open: true
+      tty: true
+      restart: always
     networks:
       Atelier:
         ipv4_address: 172.16.3.2
@@ -53,6 +74,9 @@ services :
   AtelierB:
     image: ubuntu:latest
     container_name: AtelierB
+    stdin_open: true
+      tty: true
+      restart: always
     networks:
       Atelier:
         ipv4_address: 172.16.3.3
