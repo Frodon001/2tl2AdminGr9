@@ -4,9 +4,6 @@ services :
   Directeur:
     image: ubuntu:latest
     container_name: Directeur
-    stdin_open: true
-    tty: true
-    restart: always
     networks:
       Direction:
         ipv4_address: 172.16.1.2
@@ -14,9 +11,6 @@ services :
   SecretaireA:
     image: ubuntu:latest
     container_name: SecretaireA
-    stdin_open: true
-      tty: true
-      restart: always
     networks:
       Direction:
         ipv4_address: 172.16.1.101
@@ -24,9 +18,6 @@ services :
   SecretaireB:
     image: ubuntu:latest
     container_name: SecretaireB
-    stdin_open: true
-      tty: true
-      restart: always
     networks:
       Direction:
         ipv4_address: 172.16.1.102
@@ -34,9 +25,6 @@ services :
   AdministrationA:
     image: ubuntu:latest
     container_name: AdministrationA
-    stdin_open: true
-      tty: true
-      restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.2
@@ -44,9 +32,6 @@ services :
   AdministrationB:
     image: ubuntu:latest
     container_name: AdministrationB
-    stdin_open: true
-      tty: true
-      restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.3
@@ -54,9 +39,6 @@ services :
   MarketingA:
     image: ubuntu:latest
     container_name: MarketingA
-    stdin_open: true
-      tty: true
-      restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.101
@@ -64,9 +46,6 @@ services :
   MarketingB:
     image: ubuntu:latest
     container_name: MarketingB
-    stdin_open: true
-      tty: true
-      restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.102
@@ -74,9 +53,6 @@ services :
   AtelierA:
     image: ubuntu:latest
     container_name: AtelierA
-    stdin_open: true
-      tty: true
-      restart: always
     networks:
       Atelier:
         ipv4_address: 172.16.3.2
@@ -84,9 +60,6 @@ services :
   AtelierB:
     image: ubuntu:latest
     container_name: AtelierB
-    stdin_open: true
-      tty: true
-      restart: always
     networks:
       Atelier:
         ipv4_address: 172.16.3.3
