@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Site b2b</title>
+    <title>Site interne</title>
     <style>
         table, th {
             border-collapse: collapse;
