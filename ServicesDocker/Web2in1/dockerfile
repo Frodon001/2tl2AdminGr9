@@ -37,6 +37,13 @@ RUN	\
 	&& ln -sf /dev/stderr /var/log/apache2/error.log \
 	&& chmod 755 /sbin/entrypoint.sh \
 	&& chown www-data:www-data ${PHP_DATA_DIR} -Rf
+	# Ajout de certBot
+	&& apt-get update
+	&& apt-get install software-properties-common
+	&& add-apt-repository universe
+	&& add-apt-repository ppa:certbot/certbot
+	&& apt-get update
+	&& apt-get install certbot python3-certbot-apache
 
 COPY ./configs/app.conf ${APACHE_CONF_DIR}/sites-enabled/app.conf
 COPY ./configs/php.ini  ${PHP_CONF_DIR}/apache2/conf.d/custom.ini
