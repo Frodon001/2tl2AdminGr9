@@ -8,44 +8,37 @@ services :
       Direction:
         ipv4_address: 172.16.1.2
 
-  SecretaireA:
+  Secretaire:
     image: ubuntu:latest
-    container_name: SecretaireA
+    container_name: Secretaire
     networks:
       Direction:
         ipv4_address: 172.16.1.101
 
-  SecretaireB:
+  comptableA:
     image: ubuntu:latest
-    container_name: SecretaireB
-    networks:
-      Direction:
-        ipv4_address: 172.16.1.102
-
-  AdministrationA:
-    image: ubuntu:latest
-    container_name: AdministrationA
+    container_name: comptableA
     networks:
       Administration:
         ipv4_address: 172.16.2.2
 
-  AdministrationB:
+  comptableB:
     image: ubuntu:latest
-    container_name: AdministrationB
+    container_name: comptableB
     networks:
       Administration:
         ipv4_address: 172.16.2.3
 
-  MarketingA:
+  CommercialA:
     image: ubuntu:latest
-    container_name: MarketingA
+    container_name: CommercialA
     networks:
       Administration:
         ipv4_address: 172.16.2.101
 
-  MarketingB:
+  CommercialB:
     image: ubuntu:latest
-    container_name: MarketingB
+    container_name: CommercialB
     networks:
       Administration:
         ipv4_address: 172.16.2.102

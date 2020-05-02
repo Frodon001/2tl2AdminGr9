@@ -32,7 +32,7 @@ curl -o configs/php.ini https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9
 # download web files
 curl -o app/b2b/index.php https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/b2b/index.php
 curl -o app/vitrine/index.html https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/vitrine/index.html
-curl -o app/internal/index.html https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/internal/index.html
+curl -o app/internal/index.php https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/internal/index.php
 # download fichiers DB
 curl -o sql-scripts/db-init.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/sql-scripts/db-init.sql
 

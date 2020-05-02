@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Site b2b</title>
+    <title>Site interne</title>
     <style>
         table, th {
             border-collapse: collapse;
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+<h1>Bienvenuu sur le Site interne</h1>
 <div id = "main">
     <form action = "" method = "post">
         <label>Ajouter un produit :</label>
