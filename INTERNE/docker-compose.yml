@@ -5,7 +5,7 @@ services :
     image: ubuntu:latest
     container_name: Directeur
     stdin_open: true
-    tty: true
+    entrypoint: /bin/bash
     restart: always
     networks:
       Direction:
@@ -15,7 +15,7 @@ services :
     image: ubuntu:latest
     container_name: Secretaire
     stdin_open: true
-    tty: true
+    entrypoint: /bin/bash
     restart: always
     networks:
       Direction:
@@ -25,7 +25,7 @@ services :
     image: ubuntu:latest
     container_name: comptableA
     stdin_open: true
-    tty: true
+    entrypoint: /bin/bash
     restart: always
     networks:
       Administration:
@@ -35,7 +35,7 @@ services :
     image: ubuntu:latest
     container_name: comptableB
     stdin_open: true
-    tty: true
+    entrypoint: /bin/bash
     restart: always
     networks:
       Administration:
@@ -45,7 +45,7 @@ services :
     image: ubuntu:latest
     container_name: CommercialA
     stdin_open: true
-    tty: true
+    entrypoint: /bin/bash
     restart: always
     networks:
       Administration:
@@ -55,7 +55,7 @@ services :
     image: ubuntu:latest
     container_name: CommercialB
     stdin_open: true
-    tty: true
+    entrypoint: /bin/bash
     restart: always
     networks:
       Administration:
@@ -65,7 +65,7 @@ services :
     image: ubuntu:latest
     container_name: AtelierA
     stdin_open: true
-    tty: true
+    entrypoint: /bin/bash
     restart: always
     networks:
       Atelier:
@@ -75,7 +75,7 @@ services :
     image: ubuntu:latest
     container_name: AtelierB
     stdin_open: true
-    tty: true
+    entrypoint: /bin/bash
     restart: always
     networks:
       Atelier:
