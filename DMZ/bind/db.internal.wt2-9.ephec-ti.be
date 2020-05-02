@@ -26,6 +26,8 @@ smtp                IN  CNAME   mail
 pop                 IN  CNAME   mail
 imap                IN  CNAME   mail
 
+mail IN TXT "v=spf1 a mx ip4:51.178.41.95 ~all"
+
 ; voip service
 _sip._udp		SRV	0	0	5060	sip
 _sip._tcp		SRV 0	0	5060	sip
