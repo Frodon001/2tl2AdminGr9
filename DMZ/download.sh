@@ -50,4 +50,4 @@ curl -o voip/conf/manager.conf https://raw.githubusercontent.com/Frodon001/2tl2A
 curl -o voip/conf/features.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/features.conf
 
 # définition des modes
-chmod 777 ./https
+chmod 777 ./https.sh
