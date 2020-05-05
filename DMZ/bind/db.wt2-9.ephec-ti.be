@@ -26,7 +26,7 @@ mail                IN  A   51.178.41.95
 smtp                IN  CNAME   mail
 pop                 IN  CNAME   mail
 imap                IN  CNAME   mail
-_dmarc                     IN     TXT        ("v=DMARC1;p=none;sp=reject;pct=10;"
+_dmarc              IN  TXT        ("v=DMARC1;p=none;sp=reject;pct=10;"
     "adkim=r;aspf=r;fo=1;ri=86400")
 
 mail IN TXT "v=spf1 a mx ip4:51.178.41.95 ~all"
