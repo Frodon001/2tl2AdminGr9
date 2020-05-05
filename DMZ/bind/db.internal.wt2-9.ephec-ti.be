@@ -11,6 +11,7 @@ $TTL    604800
 ; name servers - NS record
 @				IN	NS			ns.wt2-9.ephec-ti.be.
 @               IN  MX          10      mail
+@                IN    TXT         "v=spf1 a mx ip4:51.178.41.95 include:_spf.google.com ~all"
 
 ; name servers - A record
 ns 		        	IN	A	51.178.41.108
@@ -25,6 +26,7 @@ mail                IN  A   51.178.41.95
 smtp                IN  CNAME   mail
 pop                 IN  CNAME   mail
 imap                IN  CNAME   mail
+_dmarc                     IN     TXT        ("v=DMARC1;p=none;sp=reject;pct=10;"adkim=r;aspf=r;fo=1;ri=86400")
 
 mail IN TXT "v=spf1 a mx ip4:51.178.41.95 ~all"
 
