@@ -22,6 +22,7 @@ b2b                 IN  A       51.178.41.108
 ;internal			IN	A   	51.178.41.108
 
 _acme-challenge.www.wt2-9.ephec-ti.be      1		IN	TXT		"lHeXPmohFRg0MjWWZ4umNvfbUD-AygNzQQqsXrhOCfk"
+_acme-challenge.b2b.wt2-9.ephec-ti.be      1		IN	TXT		"WK8oSEA5GS7kacwhmHM7znVPhr8-qsfEA4xIjFOezUQ"
 
 ; mail services
 mail                IN  A   51.178.41.95
