@@ -21,6 +21,8 @@ www                 IN  A       51.178.41.108
 b2b                 IN  A       51.178.41.108
 ;internal			IN	A   	51.178.41.108
 
+_acme-challenge.www.wt2-9.ephec-ti.be      1		IN	TXT		"lHeXPmohFRg0MjWWZ4umNvfbUD-AygNzQQqsXrhOCfk"
+
 ; mail services
 mail                IN  A   51.178.41.95
 smtp                IN  CNAME   mail
