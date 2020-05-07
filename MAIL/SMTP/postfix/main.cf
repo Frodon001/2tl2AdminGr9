@@ -13,21 +13,21 @@ smtpd_helo_required = yes
 # Avec le courier local ça ajoute .NDD aux adresses incomplètes (seulement le nom d'hote)
 append_dot_mydomain = no
 
-# Le nom de la machine du système de messagerie
+# Le nom de la machine du système de messagerie 51.178.41.95
 # Par défaut c'est host.domain.tld mais on peut mettre un reverse dns
-myhostname = 108.41.178.51.in-addr.arpa
+myhostname = mail.wt2-9.ephec-ti.be
 
 # Le domaine utilisé par defaut pour poster les message local
-myorigin = 108.41.178.51.in-addr.arpa
+myorigin = mail.wt2-9.ephec-ti.be
 
 # Liste des domaines pour lequel le serveur doit accepter le courrier
-mydestination = 108.41.178.51.in-addr.arpa, localhost.localdomain, localhost
+#mydestination = mail.wt2-9.ephec-ti.be, wt2-9.ephec-ti.be, localhost.localdomain, localhost
 
 # Pour effectuer des livraisons de courrier avec un relay (ici non)
 relayhost =
 
 # Liste des réseaux locaux autorisés
-mynetworks = 127.0.0.0/8, 51.178.41.108
+mynetworks = 127.0.0.0/8, 51.178.41.95
 
 # Taille des boîtes au lettre (0 = illimité)
 mailbox_size_limit = 0
@@ -80,3 +80,11 @@ smtpd_recipient_restrictions =
 smtpd_client_restrictions =
         permit_mynetworks
 compatibility_level = 2
+
+milter_protocol = 2
+milter_default_action = accept
+
+smtpd_milters = inet:localhost:17789
+non_smtpd_milters = inet:localhost:17789
+
+

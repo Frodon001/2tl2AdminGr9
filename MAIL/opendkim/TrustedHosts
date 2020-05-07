@@ -1,0 +1,6 @@
+#Ne pas toucher les 3 premieres lignes
+127.0.0.1
+localhost
+192.168.0.1/24
+ 
+*.wt2-9.ephec-ti.be
