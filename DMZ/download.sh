@@ -12,6 +12,7 @@ mkdir app/internal
 mkdir configs
 mkdir voip
 mkdir voip/conf
+mkdir voip/sounds
 mkdir bind
 mkdir sql-scripts
 # download docker-compose
@@ -31,7 +32,8 @@ curl -o configs/php.ini https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9
 # download web files
 curl -o app/b2b/index.php https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/b2b/index.php
 curl -o app/vitrine/index.html https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/vitrine/index.html
-curl -o app/internal/index.html https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/internal/index.html
+curl -o app/internal/index.php https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/app/internal/index.php
+
 # download fichiers DB
 curl -o sql-scripts/db-init.sql https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/sql-scripts/db-init.sql
 
@@ -44,3 +46,4 @@ curl -o voip/conf/sip.conf https://raw.githubusercontent.com/Frodon001/2tl2Admin
 curl -o voip/conf/users.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/users.conf
 curl -o voip/conf/voicemail.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/voicemail.conf
 curl -o voip/conf/manager.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/manager.conf
+curl -o voip/conf/features.conf https://raw.githubusercontent.com/Frodon001/2tl2AdminGr9/master/DMZ/voip/conf/features.conf

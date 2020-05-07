@@ -18,3 +18,4 @@ services :
       - ./conf/iax.conf:/etc/asterisk/iax.conf
       - ./conf/queues.conf:/etc/asterisk/queues.conf
       - ./conf/manager.conf:/etc/asterisk/manager.conf
+      - ./conf/features.conf:/etc/asterisk/features.conf

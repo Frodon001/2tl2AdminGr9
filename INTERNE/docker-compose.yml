@@ -4,48 +4,59 @@ services :
   Directeur:
     image: ubuntu:latest
     container_name: Directeur
+    stdin_open: true
+    entrypoint: /bin/bash
+    restart: always
     networks:
       Direction:
         ipv4_address: 172.16.1.2
 
-  SecretaireA:
+  Secretaire:
     image: ubuntu:latest
-    container_name: SecretaireA
+    container_name: Secretaire
+    stdin_open: true
+    entrypoint: /bin/bash
+    restart: always
     networks:
       Direction:
         ipv4_address: 172.16.1.101
 
-  SecretaireB:
+  comptableA:
     image: ubuntu:latest
-    container_name: SecretaireB
-    networks:
-      Direction:
-        ipv4_address: 172.16.1.102
-
-  AdministrationA:
-    image: ubuntu:latest
-    container_name: AdministrationA
+    container_name: comptableA
+    stdin_open: true
+    entrypoint: /bin/bash
+    restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.2
 
-  AdministrationB:
+  comptableB:
     image: ubuntu:latest
-    container_name: AdministrationB
+    container_name: comptableB
+    stdin_open: true
+    entrypoint: /bin/bash
+    restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.3
 
-  MarketingA:
+  CommercialA:
     image: ubuntu:latest
-    container_name: MarketingA
+    container_name: CommercialA
+    stdin_open: true
+    entrypoint: /bin/bash
+    restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.101
 
-  MarketingB:
+  CommercialB:
     image: ubuntu:latest
-    container_name: MarketingB
+    container_name: CommercialB
+    stdin_open: true
+    entrypoint: /bin/bash
+    restart: always
     networks:
       Administration:
         ipv4_address: 172.16.2.102
@@ -53,6 +64,9 @@ services :
   AtelierA:
     image: ubuntu:latest
     container_name: AtelierA
+    stdin_open: true
+    entrypoint: /bin/bash
+    restart: always
     networks:
       Atelier:
         ipv4_address: 172.16.3.2
@@ -60,6 +74,9 @@ services :
   AtelierB:
     image: ubuntu:latest
     container_name: AtelierB
+    stdin_open: true
+    entrypoint: /bin/bash
+    restart: always
     networks:
       Atelier:
         ipv4_address: 172.16.3.3
