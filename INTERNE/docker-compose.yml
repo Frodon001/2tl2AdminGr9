@@ -2,8 +2,10 @@ version : '3.6'
 
 services :
   Directeur:
-    image: ubuntu:latest
+    image: arnaudnilens/machineinterne
     container_name: Directeur
+    volumes:
+      - ./resolv.conf:/etc/resolv.conf
     stdin_open: true
     entrypoint: /bin/bash
     restart: always
@@ -12,8 +14,10 @@ services :
         ipv4_address: 172.16.1.2
 
   Secretaire:
-    image: ubuntu:latest
+    image: arnaudnilens/machineinterne
     container_name: Secretaire
+    volumes:
+      - ./resolv.conf:/etc/resolv.conf
     stdin_open: true
     entrypoint: /bin/bash
     restart: always
@@ -22,8 +26,10 @@ services :
         ipv4_address: 172.16.1.101
 
   comptableA:
-    image: ubuntu:latest
+    image: arnaudnilens/machineinterne
     container_name: comptableA
+    volumes:
+      - ./resolv.conf:/etc/resolv.conf
     stdin_open: true
     entrypoint: /bin/bash
     restart: always
@@ -32,8 +38,10 @@ services :
         ipv4_address: 172.16.2.2
 
   comptableB:
-    image: ubuntu:latest
+    image: arnaudnilens/machineinterne
     container_name: comptableB
+    volumes:
+      - ./resolv.conf:/etc/resolv.conf
     stdin_open: true
     entrypoint: /bin/bash
     restart: always
@@ -42,8 +50,10 @@ services :
         ipv4_address: 172.16.2.3
 
   CommercialA:
-    image: ubuntu:latest
+    image: arnaudnilens/machineinterne
     container_name: CommercialA
+    volumes:
+      - ./resolv.conf:/etc/resolv.conf
     stdin_open: true
     entrypoint: /bin/bash
     restart: always
@@ -52,8 +62,10 @@ services :
         ipv4_address: 172.16.2.101
 
   CommercialB:
-    image: ubuntu:latest
+    image: arnaudnilens/machineinterne
     container_name: CommercialB
+    volumes:
+      - ./resolv.conf:/etc/resolv.conf
     stdin_open: true
     entrypoint: /bin/bash
     restart: always
@@ -62,8 +74,10 @@ services :
         ipv4_address: 172.16.2.102
 
   AtelierA:
-    image: ubuntu:latest
+    image: arnaudnilens/machineinterne
     container_name: AtelierA
+    volumes:
+      - ./resolv.conf:/etc/resolv.conf
     stdin_open: true
     entrypoint: /bin/bash
     restart: always
@@ -72,8 +86,10 @@ services :
         ipv4_address: 172.16.3.2
 
   AtelierB:
-    image: ubuntu:latest
+    image: arnaudnilens/machineinterne
     container_name: AtelierB
+    volumes:
+      - ./resolv.conf:/etc/resolv.conf
     stdin_open: true
     entrypoint: /bin/bash
     restart: always
