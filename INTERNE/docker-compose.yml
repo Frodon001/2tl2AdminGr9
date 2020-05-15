@@ -2,7 +2,7 @@ version : '3.6'
 
 services :
   Directeur:
-    image: arnaudnilens/machineinterne
+    image: arnaudnilens/machineinterne:latest
     container_name: Directeur
     volumes:
       - ./resolv.conf:/etc/resolv.conf
@@ -14,7 +14,7 @@ services :
         ipv4_address: 172.16.1.2
 
   Secretaire:
-    image: arnaudnilens/machineinterne
+    image: arnaudnilens/machineinterne:latest
     container_name: Secretaire
     volumes:
       - ./resolv.conf:/etc/resolv.conf
@@ -26,7 +26,7 @@ services :
         ipv4_address: 172.16.1.101
 
   comptableA:
-    image: arnaudnilens/machineinterne
+    image: arnaudnilens/machineinterne:latest
     container_name: comptableA
     volumes:
       - ./resolv.conf:/etc/resolv.conf
@@ -38,7 +38,7 @@ services :
         ipv4_address: 172.16.2.2
 
   comptableB:
-    image: arnaudnilens/machineinterne
+    image: arnaudnilens/machineinterne:latest
     container_name: comptableB
     volumes:
       - ./resolv.conf:/etc/resolv.conf
@@ -50,7 +50,7 @@ services :
         ipv4_address: 172.16.2.3
 
   CommercialA:
-    image: arnaudnilens/machineinterne
+    image: arnaudnilens/machineinterne:latest
     container_name: CommercialA
     volumes:
       - ./resolv.conf:/etc/resolv.conf
@@ -62,7 +62,7 @@ services :
         ipv4_address: 172.16.2.101
 
   CommercialB:
-    image: arnaudnilens/machineinterne
+    image: arnaudnilens/machineinterne:latest
     container_name: CommercialB
     volumes:
       - ./resolv.conf:/etc/resolv.conf
@@ -74,7 +74,7 @@ services :
         ipv4_address: 172.16.2.102
 
   AtelierA:
-    image: arnaudnilens/machineinterne
+    image: arnaudnilens/machineinterne:latest
     container_name: AtelierA
     volumes:
       - ./resolv.conf:/etc/resolv.conf
@@ -86,7 +86,7 @@ services :
         ipv4_address: 172.16.3.2
 
   AtelierB:
-    image: arnaudnilens/machineinterne
+    image: arnaudnilens/machineinterne:latest
     container_name: AtelierB
     volumes:
       - ./resolv.conf:/etc/resolv.conf
