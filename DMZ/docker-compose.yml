@@ -15,6 +15,7 @@ services :
       - ./bind/named.conf.local:/etc/bind/named.conf.local
       - ./bind/db.wt2-9.ephec-ti.be:/etc/bind/db.wt2-9.ephec-ti.be
       - ./bind/db.internal.wt2-9.ephec-ti.be:/etc/bind/db.wt2-9.ephec-ti.internal.be
+      #- ./bind/named.conf.log:/etc/bind/named.conf.log
     networks:
       DMZ:
         ipv4_address: 172.16.0.2
