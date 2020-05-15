@@ -15,6 +15,7 @@ view internal {
         file "/etc/bind/db.internal.wt2-9.ephec-ti.be";
     };
 };
+
 view external {
     match-clients { any; };
     allow-transfer {"none";};
