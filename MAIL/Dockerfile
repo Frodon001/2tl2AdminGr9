@@ -33,6 +33,9 @@ COPY ./dovecot/dovecot-sql.conf.ext /etc/dovecot/
 COPY ./dovecot/10-master.conf /etc/dovecot/conf.d/
 COPY ./dovecot/10-ssl.conf /etc/dovecot/conf.d/
 
+COPY ./certs/wt2-9.ephec-ti.be.crt /etc/ssl/
+COPY ./certs/wt2-9.ephec-ti.be.key /etc/ssl/
+
 RUN chmod -R o-rwx /etc/postfix
 RUN mkdir -p /var/mail/vhosts/wt2-9.ephec-ti.be
 RUN groupadd -g 5000 vmail
@@ -40,9 +43,7 @@ RUN useradd -g vmail -u 5000 vmail -d /var/mail
 RUN chown -R vmail:vmail /var/mail
 RUN chown -R vmail:dovecot /etc/dovecot
 RUN chmod -R o-rwx /etc/dovecot
-
-RUN mkdir /root/certs
-RUN cd /root/certs openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out MyCertificate.crt -keyout MyKey.key   
+ 
 
 RUN /etc/init.d/postfix restart
 RUN /etc/init.d/dovecot restart
@@ -50,4 +51,4 @@ RUN /etc/init.d/dovecot restart
 #Ports exposes
 EXPOSE 25 143 993 110 995 587
 
-CMD ["service dovecot restart && service postfix restart"]
+CMD ["sh","-c","postfix start-fg","dovecot start-fg"]
