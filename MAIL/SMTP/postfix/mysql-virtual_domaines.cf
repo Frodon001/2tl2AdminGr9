@@ -1,8 +1,0 @@
-hosts = 127.0.0.1
-user = root
-password = user1234
-dbname = postfix
-select_field = 'virtual'
-table = domaines
-where_field = domaine
-additional_conditions = AND etat=1

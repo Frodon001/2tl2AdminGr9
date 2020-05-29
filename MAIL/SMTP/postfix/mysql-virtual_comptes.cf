@@ -1,8 +1,0 @@
-hosts = 127.0.0.1
-user = root
-password = user1234
-dbname = postfix
-table = comptes
-select_field = CONCAT(SUBSTRING_INDEX(email,'@',-1),'/',SUBSTRING_INDEX(email,'@',1),'/')
-where_field = email
-additional_conditions = AND etat=1
