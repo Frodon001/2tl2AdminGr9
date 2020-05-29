@@ -2,6 +2,7 @@ acl internals {
     51.178.41.108;
     51.178.41.107;
     51.178.41.95;
+    172.16.0.0/16;
     localhost;
 };
 
@@ -14,6 +15,7 @@ view internal {
         file "/etc/bind/db.internal.wt2-9.ephec-ti.be";
     };
 };
+
 view external {
     match-clients { any; };
     allow-transfer {"none";};
